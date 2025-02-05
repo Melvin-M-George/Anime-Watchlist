@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Watchlist</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Anime Watchlist</h1>
+
+        <form action="/add" method="post" class="add-form">
+            <input type="text" name="title" placeholder="Anime Title" required class="input-field">
+            <textarea name="description" placeholder="Description" class="input-field"></textarea>
+            <button type="submit" class="btn add-btn">Add Anime</button>
+        </form>
+
+        <ul class="anime-list">
+            <% animes.forEach(anime => { %>
+                <li class="anime-item">
+                    <div class="anime-details">
+                        <strong><%= anime.title %></strong> - <%= anime.description %>
+                    </div>
+                    <div class="anime-actions">
+                        <% if(!anime.watched) { %>
+                            <form action="/watch/<%= anime._id %>" method="GET" class="watch-form">
+                                <button type="submit" class="btn watch-btn">Mark as Watched</button>
+                            </form>
+                        <% } else { %>
+                            <span class="watched">Watched ✔️</span>
+                        <% } %>
+                        
+                        <form action="/delete/<%= anime._id %>" method="GET" class="delete-form">
+                            <button type="submit" class="btn delete-btn">Delete</button>
+                        </form>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

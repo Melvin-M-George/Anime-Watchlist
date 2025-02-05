@@ -1,0 +1,162 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F5F5; /* Very light grey background */
+    color: #424874; /* Dark slate text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #424874; /* Dark slate text */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+.add-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #FFFFFF; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.input-field {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #424874; /* Sky blue border */
+    background-color: #FFFFFF; /* White background */
+    color: #2C3E50;
+    transition: 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #2C3E50; /* Dark slate border on focus */
+    background-color: #ECF0F1; /* Light grey on focus */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.add-btn {
+    background-color: #424874; /* Sky blue button */
+    color: #FFF; /* White text */
+}
+
+.add-btn:hover {
+    background-color: #59619c; /* Darker blue on hover */
+}
+
+.add-btn:active {
+    background-color: #1A5276; /* Deeper blue for active state */
+}
+
+.anime-list {
+    list-style: none;
+    padding: 0;
+}
+
+.anime-item {
+    background-color: #FFFFFF; /* White background for list items */
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.anime-item:hover {
+    background-color: #ECF0F1; /* Light grey on hover */
+}
+
+.anime-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.watch-btn {
+    background-color: #ECF0F1; /* Light grey button */
+    color: #424874; /* Dark slate text */
+}
+
+.watch-btn:hover {
+    background-color: #424874; /* Sky blue on hover */
+    color: white;
+}
+
+.watch-btn:active {
+    background-color: #DCD6F7; /* Darker blue for active state */
+}
+
+.delete-btn {
+    background-color: #A6B1E1; /* Soft red for delete button */
+    color: #FFF;
+}
+
+.delete-btn:hover {
+    background-color: #424874; /* Darker red on hover */
+}
+
+.delete-btn:active {
+    background-color: #424874; /* Deeper red for active state */
+}
+
+.watched {
+    color: #424874; /* Sky blue for the watched label */
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .input-field {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
